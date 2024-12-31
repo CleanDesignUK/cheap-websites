@@ -579,3 +579,31 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
     }
 }
+
+
+
+.navbar-brand {
+    font-size: 1.5rem; /* Adjust as needed */
+}
+.nav-link {
+    font-size: 1rem; /* Adjust as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar-brand {
+        font-size: 1.25rem; /* Slightly smaller for tablets */
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-brand {
+        font-size: 1rem; /* Even smaller for mobile screens */
+    }
+    .nav-link {
+        font-size: 0.8rem;
+    }
+}

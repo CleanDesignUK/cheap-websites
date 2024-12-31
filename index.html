@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affordable Website Designers | Home</title>
+    <title>Affordable Website Designers | Elevate Your Online Presence</title>
     <meta name="description" content="Welcome to websitedesignercheap.com, your affordable website design company offering low cost website development services. Elevate your online presence today!">
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -17,13 +17,71 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Additional Animation Styles -->
+    <style>
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Section Title Animation */
+        .section-title {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .section-title.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Section Animations */
+        .hero-content {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+
+        .hero-content.appear {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Responsive Video Handling */
+        @media (max-width: 500px) {
+            .hero-video-large {
+                display: none;
+            }
+            .hero-video-small {
+                display: block;
+            }
+        }
+
+        @media (min-width: 501px) {
+            .hero-video-small {
+                display: none;
+            }
+            .hero-video-large {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">websitedesignercheap.com</a>
+            <a class="navbar-brand" href="index.html" title="Visit Homepage of WebsiteDesignerCheap.com">WebsiteDesignerCheap.com</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
@@ -31,16 +89,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html" title="Go to Home Page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="services.html" title="Explore Our Web Design Services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sales.html">Sales</a>
+                        <a class="nav-link" href="sales.html" title="Check Out Our Current Sales and Offers">Sales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" title="Contact Our Team for a Free Quote">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -48,25 +106,34 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home-hero" class="hero d-flex align-items-center justify-content-center text-center">
+    <section id="home-hero" class="hero d-flex align-items-center justify-content-center text-center position-relative">
         <div class="hero-overlay"></div>
-        <div class="container position-relative">
-            <h1 class="text-white mb-4">Affordable Website Designers at Your Service</h1>
-            <p class="text-white mb-4">Experience top-tier web design without breaking the bank. Our affordable website designers are dedicated to delivering stunning, functional websites tailored to your business needs.</p>
-            <a href="contact.html" class="btn btn-glow">Get a Free Quote</a>
+        <!-- Responsive Videos -->
+        <video class="hero-video-large" autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
+            <source src="https://res.cloudinary.com/dhmzfiur4/video/upload/v1735631434/hero-home-video_1_1_f8kqyg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="hero-video-small" autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; display:none;">
+            <source src="https://res.cloudinary.com/dhmzfiur4/video/upload/v1735631434/hero-home-small_1_1_emm2um.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container position-relative hero-content fade-in">
+            <h1 class="mb-4">Affordable Website Designers at Your Service</h1>
+            <p class="mb-4">Experience top-tier web design without breaking the bank. Our affordable website designers are dedicated to delivering stunning, functional websites tailored to your business needs.</p>
+            <a href="contact.html" class="btn btn-glow" title="Request a Free Quote Today">Get a Free Quote</a>
         </div>
     </section>
 
     <!-- About Us Section -->
     <section id="about" class="section about-us bg-black text-white">
         <div class="container">
-            <h2 class="section-title text-center">Why Choose Us?</h2>
-            <div class="row align-items-center">
+            <h2 class="section-title text-center fade-in">Why Choose Us?</h2>
+            <div class="row align-items-center mt-4">
                 <div class="col-md-6">
-                    <img src="assets/images/about-us.jpg" alt="About Us Image" class="img-fluid rounded">
+                    <img src="about-us-image (2).jpg" alt="Creative team collaborating on a web design project" class="img-fluid rounded fade-in">
                 </div>
                 <div class="col-md-6">
-                    <p>At <strong>websitedesignercheap.com</strong>, we believe that every business deserves a professional online presence. Our team of experienced designers and developers work closely with you to create a website that not only looks great but also drives results.</p>
+                    <p>At <strong>WebsiteDesignerCheap.com</strong>, we believe that every business deserves a professional online presence. Our team of experienced designers and developers work closely with you to create a website that not only looks great but also drives results.</p>
                     <ul class="list-unstyled">
                         <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Low Cost Website Design Company</li>
                         <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Affordable Web Design Company</li>
@@ -81,49 +148,49 @@
     <!-- Services Overview -->
     <section id="services-overview" class="section">
         <div class="container">
-            <h2 class="section-title text-center">Our Web Design Services</h2>
-            <div class="row justify-content-center">
-                <!-- Service Card 1 -->
-                <div class="col-md-6 col-lg-3 mb-4">
+            <h2 class="section-title text-center fade-in">Our Web Design Services</h2>
+            <div class="row justify-content-center align-items-center mt-4">
+                <!-- Service Card 1: SEO Optimization -->
+                <div class="col-md-5 col-lg-3 mb-4">
                     <div class="card-custom">
-                        <img src="assets/images/service1.jpg" alt="Custom Website Design" class="img-fluid">
-                        <div class="card-body">
-                            <i class="bi bi-palette-fill glow-icon"></i>
-                            <h5>Custom Website Design</h5>
-                            <p>Unique designs tailored to your brand and business needs.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service Card 2 -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card-custom">
-                        <img src="assets/images/service2.jpg" alt="E-commerce Solutions" class="img-fluid">
-                        <div class="card-body">
-                            <i class="bi bi-cart-fill glow-icon"></i>
-                            <h5>E-commerce Solutions</h5>
-                            <p>Secure and scalable online stores to boost your sales.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Service Card 3 -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card-custom">
-                        <img src="assets/images/service3.jpg" alt="SEO Optimization" class="img-fluid">
+                        <img src="https://res.cloudinary.com/dhmzfiur4/image/upload/v1735634076/Websites_Gallery_zswyjb.jpg" alt="SEO Optimization strategy for higher search rankings" class="img-fluid">
                         <div class="card-body">
                             <i class="bi bi-graph-up-arrow glow-icon"></i>
                             <h5>SEO Optimization</h5>
-                            <p>Improve your website's visibility on search engines.</p>
+                            <p>Boost your website's visibility and attract more organic traffic with our expert SEO strategies.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Service Card 4 -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <!-- Service Card 2: Custom Website Design -->
+                <div class="col-md-5 col-lg-3 mb-4">
                     <div class="card-custom">
-                        <img src="assets/images/service4.jpg" alt="Website Redesign" class="img-fluid">
+                        <img src="https://res.cloudinary.com/dhmzfiur4/image/upload/v1735631206/20_wgayx0.png" alt="Unique custom website design tailored to your brand" class="img-fluid">
+                        <div class="card-body">
+                            <i class="bi bi-palette-fill glow-icon"></i>
+                            <h5>Custom Website Design</h5>
+                            <p>Stand out with a bespoke website design that perfectly aligns with your brand's identity.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 3: E-commerce Solutions -->
+                <div class="col-md-5 col-lg-3 mb-4">
+                    <div class="card-custom">
+                        <img src="https://res.cloudinary.com/dhmzfiur4/image/upload/v1735631206/bali_adventure-professional-web-designer-north-wales-bangor_w5lbne.jpg" alt="Robust e-commerce solutions for online businesses" class="img-fluid">
+                        <div class="card-body">
+                            <i class="bi bi-cart-fill glow-icon"></i>
+                            <h5>E-commerce Solutions</h5>
+                            <p>Create secure and scalable online stores that drive sales and enhance user experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 4: Website Redesign -->
+                <div class="col-md-5 col-lg-3 mb-4">
+                    <div class="card-custom">
+                        <img src="https://res.cloudinary.com/dhmzfiur4/image/upload/v1735631206/born-free-limerence-coaching-web-design-by-web-designer-north-wales-bangor_1_eternm.png" alt="Professional website redesign services" class="img-fluid">
                         <div class="card-body">
                             <i class="bi bi-arrow-counterclockwise glow-icon"></i>
                             <h5>Website Redesign</h5>
-                            <p>Revamp your existing website for better performance.</p>
+                            <p>Revitalize your existing website with a fresh, modern design that improves performance.</p>
                         </div>
                     </div>
                 </div>
@@ -134,15 +201,15 @@
     <!-- Testimonials -->
     <section id="testimonials" class="section testimonials bg-black text-white">
         <div id="shapo-widget-98b51f711d16133babfa"></div>
-        <script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
+        <script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
     </section>
 
     <!-- Call to Action -->
     <section id="cta" class="section cta">
         <div class="container">
-            <h2 class="section-title">Ready to Elevate Your Online Presence?</h2>
-            <p>Contact our affordable website designers today and take the first step towards a stunning, low-cost website.</p>
-            <a href="contact.html" class="btn btn-glow">Get a Free Quote</a>
+            <h2 class="section-title fade-in">Ready to Elevate Your Online Presence?</h2>
+            <p class="mt-3">Contact our affordable website designers today and take the first step towards a stunning, low-cost website.</p>
+            <a href="contact.html" class="btn btn-glow mt-4" title="Request Your Free Quote Now">Get a Free Quote</a>
         </div>
     </section>
 
@@ -150,14 +217,14 @@
     <footer class="footer bg-black text-white">
         <div class="container">
             <div class="social-icons mb-3">
-                <a href="#" aria-label="Follow us on Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" aria-label="Subscribe to our YouTube Channel"><i class="bi bi-youtube"></i></a>
-                <a href="#" aria-label="Connect with us on LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="#" aria-label="Follow us on Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://facebook.com/yourpage" aria-label="Follow us on Facebook" title="Follow WebsiteDesignerCheap on Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://youtube.com/yourchannel" aria-label="Subscribe to our YouTube Channel" title="Subscribe to WebsiteDesignerCheap's YouTube Channel"><i class="bi bi-youtube"></i></a>
+                <a href="https://linkedin.com/company/yourcompany" aria-label="Connect with us on LinkedIn" title="Connect with WebsiteDesignerCheap on LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://instagram.com/yourprofile" aria-label="Follow us on Instagram" title="Follow WebsiteDesignerCheap on Instagram"><i class="bi bi-instagram"></i></a>
             </div>
             <p>WEBSITEDESIGNERCHEAP C.I.C. &copy; 2024. Delivering affordable web design and development solutions.</p>
             <p>
-                <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a>
+                <a href="privacy.html" title="Read our Privacy Policy">Privacy Policy</a> | <a href="cookies.html" title="Learn about our Cookie Policy">Cookie Policy</a>
             </p>
         </div>
     </footer>
@@ -167,5 +234,44 @@
     
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
+
+    <!-- Animation Trigger Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faders = document.querySelectorAll('.fade-in');
+            const sectionTitles = document.querySelectorAll('.section-title');
+            const heroContent = document.querySelector('.hero-content');
+
+            // Intersection Observer Options
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            // Callback for Observer
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            // Observe fade-in elements
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // Observe section titles
+            sectionTitles.forEach(title => {
+                appearOnScroll.observe(title);
+            });
+
+            // Observe hero content
+            if (heroContent) {
+                appearOnScroll.observe(heroContent);
+            }
+        });
+    </script>
 </body>
 </html>
